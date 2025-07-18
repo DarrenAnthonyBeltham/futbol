@@ -1,0 +1,17 @@
+export const players = [
+    { id: 1, name: 'Lamine Yamal', rating: 88, position: 'FWD' },
+    { id: 2, name: 'Raphinha', rating: 86, position: 'FWD' },
+    { id: 3, name: 'Harry Kane', rating: 95, position: 'FWD' },
+    { id: 4, name: 'Cole Palmer', rating: 89, position: 'MID' },
+    { id: 5, name: 'Jude Bellingham', rating: 96, position: 'MID' },
+    { id: 6, name: 'Declan Rice', rating: 92, position: 'MID' },
+    { id: 7, name: 'Nuno Mendes', rating: 87, position: 'DEF' },
+    { id: 8, name: 'William Saliba', rating: 91, position: 'DEF' },
+    { id: 9, name: 'Virgil van Dijk', rating: 94, position: 'DEF' },
+    { id: 10, name: 'Kyle Walker', rating: 88, position: 'DEF' },
+    { id: 11, name: 'Alisson Becker', rating: 93, position: 'GK' },
+    { id: 12, name: 'Kylian Mbappé', rating: 97, position: 'FWD' },
+    { id: 13, name: 'Florian Wirtz', rating: 91, position: 'MID' },
+    { id: 14, name: 'Rodri', rating: 94, position: 'MID' },
+    { id: 15, name: 'Trent Alexander-Arnold', rating: 90, position: 'DEF' },
+];

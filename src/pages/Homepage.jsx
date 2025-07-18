@@ -4,7 +4,7 @@ import FeatureSection from "../components/FeatureSection";
 
 const Homepage = () => {
     return (
-        <main>
+        <main className="overflow-hidden">
             <HeroSection></HeroSection>
             <FeatureSection></FeatureSection>
         </main>
