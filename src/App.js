@@ -5,6 +5,7 @@ import Homepage from './pages/Homepage';
 import FormationBuilderPage from './pages/FormationBuilderPage'; 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import PlayerCards from './pages/PlayerCards';
 
 const PlaceholderPage = ({ title }) => (
     <div className="container mx-auto p-8 text-center">
@@ -23,7 +24,7 @@ function App() {
             case '/builder':
                 return <FormationBuilderPage />;
             case '/cards':
-                return <PlaceholderPage title="Player Cards" />;
+                return <PlayerCards />;
             case '/about':
                 return <PlaceholderPage title="About Us" />;
             case '/contact':

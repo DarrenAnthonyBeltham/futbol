@@ -3,6 +3,7 @@ import { players } from '../data/players.js';
 import { formations } from '../data/formation.js';
 import PlayerSlot from '../components/PlayerSlot.jsx';
 import PlayerCard from '../components/PlayerCard.jsx';
+import FootballField from '../asset/Football_field.png';
 
 const FormationBuilderPage = () => {
     const [selectedFormation, setSelectedFormation] = useState('4-3-3');
@@ -29,13 +30,10 @@ const FormationBuilderPage = () => {
     return (
         <div className="bg-brand-dark min-h-screen p-4 sm:p-6 lg:p-8">
             <div className="container mx-auto">
-                <div className="grid lg:grid-cols-3 gap-8">
-                    
+                <div className="grid lg:grid-cols-3 gap-8">                   
                     <div className="lg:col-span-2">
-                        <div 
-                            className="relative w-full aspect-[4/3] bg-cover bg-center rounded-xl shadow-2xl"
-                            style={{ backgroundImage: "url('https://i.imgur.com/t214n4s.png')" }}
-                        >
+                        <div className="relative w-full rounded-xl shadow-2xl">
+                            <img src={FootballField} alt="Football field" className="w-full h-auto rounded-xl z-3" />
                             {formationLayout.map((position, index) => (
                                 <PlayerSlot 
                                     key={index}
@@ -48,8 +46,7 @@ const FormationBuilderPage = () => {
                     </div>
 
                     <div className="glass-card rounded-xl p-6 flex flex-col">
-                        <h2 className="text-2xl font-bold text-white mb-4">Team Setup</h2>
-                        
+                        <h2 className="text-2xl font-bold text-white mb-4">Team Setup</h2>    
                         <div className="mb-6">
                             <label htmlFor="formation" className="block text-sm font-medium text-brand-gray mb-2">Formation</label>
                             <select 
