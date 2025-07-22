@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PlayerCards from './pages/PlayerCards';
 import AboutUs from './pages/AboutUs';
+import Contact from './pages/Contact';
 
 const PlaceholderPage = ({ title }) => (
     <div className="container mx-auto p-8 text-center">
@@ -29,7 +30,7 @@ function App() {
             case '/about':
                 return <AboutUs />;
             case '/contact':
-                 return <PlaceholderPage title="Contact" />;
+                 return <Contact />;
             case '/careers':
                  return <PlaceholderPage title="Careers" />;
             case '/stats':
