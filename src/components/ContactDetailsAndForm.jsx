@@ -13,7 +13,6 @@ const ContactDetailsAndForm = () => {
         setName('');
         setEmail('');
         setMessage('');
-
         setShowPopup(true);
     };
 

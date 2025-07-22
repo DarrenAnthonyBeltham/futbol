@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import PlayerCards from './pages/PlayerCards';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
+import Careers from './pages/Careers';
 
 const PlaceholderPage = ({ title }) => (
     <div className="container mx-auto p-8 text-center">
@@ -32,9 +33,7 @@ function App() {
             case '/contact':
                  return <Contact />;
             case '/careers':
-                 return <PlaceholderPage title="Careers" />;
-            case '/stats':
-                 return <PlaceholderPage title="Stats" />;
+                 return <Careers />;
             default:
                 return <Homepage />;
         }

@@ -2,8 +2,7 @@ import React from 'react';
 
 const productLinks = [
     { title: 'Builder', path: '/builder' },
-    { title: 'Player Cards', path: '/cards' },
-    { title: 'Stats', path: '/stats' },
+    { title: 'Player Cards', path: '/cards' }
 ];
 
 const companyLinks = [
