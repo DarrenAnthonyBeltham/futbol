@@ -23,7 +23,7 @@ function App() {
     const renderPage = () => {
         switch (currentPage) {
             case '/':
-                return <Homepage />;
+                return <Homepage onNavigate={setCurrentPage} />; 
             case '/builder':
                 return <FormationBuilderPage />;
             case '/cards':
