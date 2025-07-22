@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { players } from '../data/players.js';
 import { formations } from '../data/formation.js';
 import PlayerSlot from '../components/PlayerSlot.jsx';
@@ -17,8 +17,9 @@ const FormationBuilderPage = () => {
     const handleDrop = (e, slotIndex) => {
         const playerId = e.dataTransfer.getData("playerId");
         const player = players.find(p => p.id.toString() === playerId);
+        const slotType = formations[selectedFormation][slotIndex].type;
 
-        if (player && !team.some(p => p?.id === player.id)) {
+        if (player && player.position === slotType && !team.some(p => p?.id === player.id)) {
             const newTeam = [...team];
             newTeam[slotIndex] = player;
             setTeam(newTeam);
@@ -27,13 +28,22 @@ const FormationBuilderPage = () => {
 
     const formationLayout = formations[selectedFormation];
 
+    const teamRating = useMemo(() => {
+        const placedPlayers = team.filter(p => p !== null);
+        if (placedPlayers.length === 0) {
+            return 0;
+        }
+        const totalRating = placedPlayers.reduce((sum, player) => sum + player.rating, 0);
+        return Math.round(totalRating / placedPlayers.length);
+    }, [team]);
+
     return (
         <div className="bg-brand-dark min-h-screen p-4 sm:p-6 lg:p-8">
             <div className="container mx-auto">
-                <div className="grid lg:grid-cols-3 gap-8">                   
+                <div className="grid lg:grid-cols-3 gap-8">              
                     <div className="lg:col-span-2">
                         <div className="relative w-full rounded-xl shadow-2xl">
-                            <img src={FootballField} alt="Football field" className="w-full h-auto rounded-xl z-3" />
+                            <img src={FootballField} alt="Football field" className="w-full h-auto rounded-xl" />
                             {formationLayout.map((position, index) => (
                                 <PlayerSlot 
                                     key={index}
@@ -46,7 +56,14 @@ const FormationBuilderPage = () => {
                     </div>
 
                     <div className="glass-card rounded-xl p-6 flex flex-col">
-                        <h2 className="text-2xl font-bold text-white mb-4">Team Setup</h2>    
+                        <div className="flex justify-between items-start mb-4">
+                            <h2 className="text-2xl font-bold text-white">Team Setup</h2>
+                            <div className="text-right">
+                                <span className="block text-xs font-medium text-brand-gray">Overall Rating</span>
+                                <span className="text-4xl font-black text-brand-accent">{teamRating}</span>
+                            </div>
+                        </div>
+                        
                         <div className="mb-6">
                             <label htmlFor="formation" className="block text-sm font-medium text-brand-gray mb-2">Formation</label>
                             <select 
