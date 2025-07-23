@@ -6,7 +6,7 @@ const Homepage = ({ onNavigate }) => {
     return (
         <main className="overflow-hidden">
             <HeroSection onNavigate={onNavigate}></HeroSection>
-            <FeatureSection></FeatureSection>
+            <FeatureSection  onNavigate={onNavigate}></FeatureSection>
         </main>
     );
 };

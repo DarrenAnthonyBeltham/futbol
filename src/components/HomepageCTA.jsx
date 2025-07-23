@@ -8,7 +8,7 @@ const HomepageCTA = ({ onNavigate = () => {} }) => {
     };
 
     return (
-        <section className="py-5">
+        <section className="py-20">
             <div className="container mx-auto px-6 text-center">
                 <h2 className="text-4xl md:text-5xl font-extrabold mb-4">Ready to <span className="text-brand-accent">Unleash</span> Your Vision?</h2>
                 <p className="text-brand-gray text-lg max-w-2xl mx-auto mb-10">Stop dreaming, start building. Your first masterpiece is just a click away.</p>

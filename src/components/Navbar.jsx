@@ -17,8 +17,8 @@ const Navbar = ({ onNavigate = () => {} }) => {
         <nav className="bg-black/50 backdrop-blur-md sticky top-0 z-50 border-b border-white/10">
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                 
-                <a href="/" onClick={(e) => handleNavClick(e, '/')} className="text-2xl font-bold">
-                    Futb<span className="text-brand-accent">⚽</span>l
+                <a href="/" onClick={(e) => handleNavClick(e, '/')} className="text-2xl font-bold group">
+                    Futb<span className="text-brand-accent inline-block transition-transform duration-500 ease-in-out group-hover:rotate-180">⚽</span>l
                 </a>
 
                 <div className="hidden md:flex items-center space-x-8 font-medium text-sm">
