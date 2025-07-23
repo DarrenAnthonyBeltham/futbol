@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# Futbol - The Ultimate Football Tactics Board
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Futbol Logo](https://i.imgur.com/s6W2w3X.png)
 
-## Available Scripts
+**Futbol** is a modern, web-based application designed for football fans, coaches, and analysts. It provides an intuitive and visually appealing platform to build team formations, explore detailed player stats, and bring tactical ideas to life.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Interactive Formation Builder:**
+    * Drag-and-drop players from a roster onto a football pitch.
+    * Select from multiple popular formations (4-3-3, 4-4-2, 3-5-2).
+    * Position-locking ensures players can only be placed in their valid roles (FWD, MID, DEF, GK).
+    * Real-time calculation of the team's overall rating based on the players on the pitch.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **Dynamic Player Cards Page:**
+    * Browse a grid of beautifully designed player cards.
+    * View detailed, FIFA-style stats for each player (Pace, Shooting, Dribbling, etc.).
+    * Overall ratings are dynamically calculated based on individual stats and position.
 
-### `npm test`
+* **Modern, Responsive UI:**
+    * A sleek, dark-themed design with a high-energy accent color.
+    * Fully responsive layout that works seamlessly on desktop, tablet, and mobile devices.
+    * Built with modern UI effects like glassmorphism and subtle glows.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Client-Side Routing:**
+    * A fast, single-page application experience with seamless navigation between the Homepage, Builder, Player Cards, and other pages.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **Frontend:** [React.js](https://reactjs.org/) (using functional components and hooks)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/) (utility-first CSS framework)
+* **Deployment:** [Vercel](https://vercel.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📂 Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The project is organized into a clean and scalable structure to make development and maintenance easy.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+/futbol
+|-- /public
+|   |-- index.html
+|   |-- logo.png
+|-- /src
+|   |-- /asset
+|   |   |-- Football_field.png
+|   |   |-- (player images...)
+|   |-- /components
+|   |   |-- Navbar.jsx
+|   |   |-- Footer.jsx
+|   |   |-- PlayerCard.jsx
+|   |   |-- PlayerSlot.jsx
+|   |   |-- PlayerStatCard.jsx
+|   |   |-- (other section components...)
+|   |-- /data
+|   |   |-- players.js
+|   |   |-- formations.js
+|   |-- /pages
+|   |   |-- Homepage.jsx
+|   |   |-- FormationBuilderPage.jsx
+|   |   |-- PlayerCardsPage.jsx
+|   |   |-- AboutPage.jsx
+|   |   |-- ContactPage.jsx
+|   |   |-- CareersPage.jsx
+|   |-- App.js
+|   |-- index.css
+|-- package.json
+|-- tailwind.config.js
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Getting Started
 
-## Learn More
+To get a local copy up and running, follow these simple steps.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Node.js (v14 or later)
+* npm or yarn
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1.  **Clone the repository:**
+    ```sh
+    git clone [https://github.com/your-username/futbol.git](https://github.com/your-username/futbol.git)
+    ```
+2.  **Navigate to the project directory:**
+    ```sh
+    cd futbol
+    ```
+3.  **Install NPM packages:**
+    ```sh
+    npm install
+    ```
 
-### Analyzing the Bundle Size
+### Running the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To start the development server, run the following command:
+```sh
+npm start
+```
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will reload when you make changes.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Deployment
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is configured for seamless deployment on [Vercel](https://vercel.com/). Simply connect your GitHub repository to Vercel, and it will automatically detect the Create React App settings and deploy your site.
