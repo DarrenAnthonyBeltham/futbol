@@ -4,13 +4,13 @@ import PlayerCardsHomepage from "./PlayerCardsHomepage";
 import Testimonial from "./Testimonial";
 import HomepageCTA from "./HomepageCTA";
 
-const FeatureSection = () => {
+const FeatureSection = ({ onNavigate }) => {
     return (
         <main>
             <FormationBuilder />
             <PlayerCardsHomepage />
             <Testimonial />
-            <HomepageCTA />
+            <HomepageCTA onNavigate={onNavigate}/>
         </main>
     );
 };

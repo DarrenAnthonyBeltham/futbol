@@ -7,7 +7,7 @@ const navLinks = [
     { title: 'About', path: '/about' },
 ];
 
-const Navbar = ({ onNavigate }) => {
+const Navbar = ({ onNavigate = () => {} }) => {
     const handleNavClick = (e, path) => {
         e.preventDefault();
         onNavigate(path);
@@ -33,7 +33,10 @@ const Navbar = ({ onNavigate }) => {
                         </a>
                     ))}
                 </div>
-                <button className="bg-brand-accent text-brand-dark font-bold py-2 px-5 rounded-full text-sm hover:bg-brand-accent-dark transition-colors cta-glow">
+                <button 
+                    onClick={(e) => handleNavClick(e, '/builder')}
+                    className="bg-brand-accent text-brand-dark font-bold py-2 px-5 rounded-full text-sm hover:bg-brand-accent-dark transition-colors cta-glow"
+                >
                     Get Started
                 </button>
             </div>
