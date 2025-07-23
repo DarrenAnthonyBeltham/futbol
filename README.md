@@ -1,7 +1,5 @@
 # Futbol - The Ultimate Football Tactics Board
 
-![Futbol Logo](https://i.imgur.com/s6W2w3X.png)
-
 **Futbol** is a modern, web-based application designed for football fans, coaches, and analysts. It provides an intuitive and visually appealing platform to build team formations, explore detailed player stats, and bring tactical ideas to life.
 
 ---
@@ -82,8 +80,8 @@ To get a local copy up and running, follow these simple steps.
 ### Prerequisites
 
 * Node.js (v14 or later)
-* npm or yarn
-
+* npm
+  
 ### Installation
 
 1.  **Clone the repository:**
